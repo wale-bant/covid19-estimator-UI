@@ -8,15 +8,11 @@ export default function Footer() {
     <Box>
       <footer className="App-footer">
         <Typography variant="body2" color="textSecondary" align="center">
-          {/* {'Copyright © '} */}
           Built after washing hands by
           {' '}
           <Link color="inherit" href="https://waledev.com/">
             Olawale Ashiru
           </Link>
-          {/* {' '}
-          {new Date().getFullYear()}
-          . */}
         </Typography>
       </footer>
     </Box>

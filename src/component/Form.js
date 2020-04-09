@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import InputLabel from '@material-ui/core/InputLabel';
+import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
+import Container from '@material-ui/core/Container';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { makeStyles } from '@material-ui/core/styles';
+import logo from '../assets/coronavirus.png';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -20,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: '#fff',
+    backgroundColor: theme.backgroundColor,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -31,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MyForm() {
+export default function Form() {
   const classes = useStyles();
 
   const [state, setState] = useState({
@@ -41,12 +39,15 @@ export default function MyForm() {
       avgDailyIncomeInUSD: 5,
       avgDailyIncomePopulation: 0.71,
     },
-    periodType: '',
+    periodType: 'days',
     timeToElapse: '',
     reportedCases: '',
     population: '',
     totalHospitalBeds: '',
   });
+
+  const isValid = state.population && state.totalHospitalBeds
+  && state.reportedCases && state.timeToElapse;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -62,9 +63,7 @@ export default function MyForm() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <img src="https://img.icons8.com/nolan/64/coronavirus.png" />
-        </Avatar>
+        <img className={classes.avatar} alt="covid-19" src={logo} />
         <Typography component="h1" variant="h5">
           COVID-19 ESTIMATOR
         </Typography>
@@ -80,9 +79,6 @@ export default function MyForm() {
                 label="Population"
                 autoFocus
                 type="number"
-                InputLabelProps={{
-                  shrink: true,
-                }}
                 data-population
                 value={state.population}
                 onChange={handleChange}
@@ -97,9 +93,6 @@ export default function MyForm() {
                 label="Reported Cases"
                 id="reported-cases"
                 type="number"
-                InputLabelProps={{
-                  shrink: true,
-                }}
                 data-reported-cases
                 value={state.reportedCases}
                 onChange={handleChange}
@@ -114,9 +107,6 @@ export default function MyForm() {
                 label="Total Hospital Beds"
                 name="totalHospitalBeds"
                 type="number"
-                InputLabelProps={{
-                  shrink: true,
-                }}
                 data-total-hospital-beds
                 value={state.totalHospitalBeds}
                 onChange={handleChange}
@@ -131,32 +121,26 @@ export default function MyForm() {
                 label="Time To Elapse"
                 name="timeToElapse"
                 type="number"
-                InputLabelProps={{
-                  shrink: true,
-                }}
                 data-time-to-elapse
                 value={state.timeToElapse}
                 onChange={handleChange}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              {/* <InputLabel id="period-type-label">Period Type</InputLabel> */}
-              <Select
-                variant="outlined"
-                labelId="period-type"
+              <TextField
                 id="period-type"
-                name="periodType"
-                data-period-type
-                required
+                select
                 fullWidth
+                label="Period Type"
+                name="periodType"
                 value={state.periodType}
                 onChange={handleChange}
+                variant="outlined"
               >
-                <MenuItem value="">Period Type</MenuItem>
                 <MenuItem value="days">Days</MenuItem>
                 <MenuItem value="weeks">Weeks</MenuItem>
                 <MenuItem value="months">Months</MenuItem>
-              </Select>
+              </TextField>
             </Grid>
           </Grid>
           <Button
@@ -164,10 +148,12 @@ export default function MyForm() {
             fullWidth
             variant="contained"
             color="primary"
+            size="large"
             className={classes.submit}
             data-go-estimate
+            disabled={!isValid}
           >
-            Estimate
+            Get Estimate
           </Button>
         </form>
       </div>

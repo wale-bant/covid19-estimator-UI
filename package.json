@@ -2,6 +2,9 @@
   "name": "covid19-estimator-ui",
   "version": "0.1.0",
   "private": true,
+  "author": "Ashiru Olawale",
+  "description": "Andela #BuildforSDG Cohort 1, challenge 4 assessment",
+  "homepage": ".",
   "dependencies": {
     "@material-ui/core": "^4.9.9",
     "@material-ui/icons": "^4.9.1",

@@ -64,8 +64,8 @@ export default function Form() {
       <CssBaseline />
       <div className={classes.paper}>
         <img className={classes.avatar} alt="covid-19" src={logo} />
-        <Typography component="h1" variant="h5">
-          COVID-19 ESTIMATOR
+        <Typography component="h1" variant="h5" style={{ textAlign: 'center' }}>
+          An overly simplified COVID-19 infection impact estimator
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>

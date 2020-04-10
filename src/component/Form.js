@@ -70,72 +70,72 @@ export default function Form() {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
-                name="population"
-                variant="outlined"
                 required
                 fullWidth
-                id="population"
-                label="Population"
                 autoFocus
                 type="number"
-                value={state.population}
+                id="population"
+                name="population"
+                label="Population"
+                variant="outlined"
                 onChange={handleChange}
+                value={state.population}
                 inputProps={{ 'data-population': true }}
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                variant="outlined"
                 required
                 fullWidth
+                type="number"
+                variant="outlined"
+                id="reported-cases"
                 name="reportedCases"
                 label="Reported Cases"
-                id="reported-cases"
-                type="number"
-                inputProps={{ 'data-reported-cases': true }}
-                value={state.reportedCases}
                 onChange={handleChange}
+                value={state.reportedCases}
+                inputProps={{ 'data-reported-cases': true }}
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                variant="outlined"
                 required
                 fullWidth
+                type="number"
+                variant="outlined"
                 id="total-hospital-beds"
-                label="Total Hospital Beds"
                 name="totalHospitalBeds"
-                type="number"
-                inputProps={{ 'data-total-hospital-beds': true }}
-                value={state.totalHospitalBeds}
+                label="Total Hospital Beds"
                 onChange={handleChange}
+                value={state.totalHospitalBeds}
+                inputProps={{ 'data-total-hospital-beds': true }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                variant="outlined"
                 required
                 fullWidth
-                id="time-to-elapse"
-                label="Time To Elapse"
-                name="timeToElapse"
                 type="number"
-                inputProps={{ 'data-time-to-elapse': true }}
-                value={state.timeToElapse}
+                variant="outlined"
+                id="time-to-elapse"
+                name="timeToElapse"
+                label="Time To Elapse"
                 onChange={handleChange}
+                value={state.timeToElapse}
+                inputProps={{ 'data-time-to-elapse': true }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                id="period-type"
                 select
                 fullWidth
-                label="Period Type"
+                id="period-type"
                 name="periodType"
-                inputProps={{ 'data-period-type': true }}
+                variant="outlined"
+                label="Period Type"
                 value={state.periodType}
                 onChange={handleChange}
-                variant="outlined"
+                inputProps={{ 'data-period-type': true }}
               >
                 <MenuItem value="days">Days</MenuItem>
                 <MenuItem value="weeks">Weeks</MenuItem>
@@ -144,14 +144,14 @@ export default function Form() {
             </Grid>
           </Grid>
           <Button
-            type="submit"
             fullWidth
-            variant="contained"
-            color="primary"
             size="large"
-            className={classes.submit}
+            type="submit"
+            color="primary"
+            variant="contained"
             data-go-estimate
             disabled={!isValid}
+            className={classes.submit}
           >
             Get Estimate
           </Button>

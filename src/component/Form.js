@@ -78,9 +78,9 @@ export default function Form() {
                 label="Population"
                 autoFocus
                 type="number"
-                data-population
                 value={state.population}
                 onChange={handleChange}
+                inputProps={{ 'data-population': true }}
               />
             </Grid>
             <Grid item xs={12}>
@@ -92,7 +92,7 @@ export default function Form() {
                 label="Reported Cases"
                 id="reported-cases"
                 type="number"
-                data-reported-cases
+                inputProps={{ 'data-reported-cases': true }}
                 value={state.reportedCases}
                 onChange={handleChange}
               />
@@ -106,7 +106,7 @@ export default function Form() {
                 label="Total Hospital Beds"
                 name="totalHospitalBeds"
                 type="number"
-                data-total-hospital-beds
+                inputProps={{ 'data-total-hospital-beds': true }}
                 value={state.totalHospitalBeds}
                 onChange={handleChange}
               />
@@ -120,7 +120,7 @@ export default function Form() {
                 label="Time To Elapse"
                 name="timeToElapse"
                 type="number"
-                data-time-to-elapse
+                inputProps={{ 'data-time-to-elapse': true }}
                 value={state.timeToElapse}
                 onChange={handleChange}
               />
@@ -132,6 +132,7 @@ export default function Form() {
                 fullWidth
                 label="Period Type"
                 name="periodType"
+                inputProps={{ 'data-period-type': true }}
                 value={state.periodType}
                 onChange={handleChange}
                 variant="outlined"

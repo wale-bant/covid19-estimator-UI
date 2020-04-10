@@ -5,6 +5,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../assets/coronavirus.png';
@@ -22,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(3),
+  },
+  formControl: {
+    width: '100%',
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
@@ -126,21 +132,21 @@ export default function Form() {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField
-                select
-                fullWidth
-                id="period-type"
-                name="periodType"
-                variant="outlined"
-                label="Period Type"
-                value={state.periodType}
-                onChange={handleChange}
-                inputProps={{ 'data-period-type': true }}
-              >
-                <MenuItem value="days">Days</MenuItem>
-                <MenuItem value="weeks">Weeks</MenuItem>
-                <MenuItem value="months">Months</MenuItem>
-              </TextField>
+              <FormControl variant="outlined" className={classes.formControl}>
+                <InputLabel id="period-type-label">Period Type</InputLabel>
+                <Select
+                  id="period-type"
+                  name="periodType"
+                  variant="outlined"
+                  label="Period Type"
+                  onChange={handleChange}
+                  value={state.periodType}
+                >
+                  <MenuItem data-period-type value="days">Days</MenuItem>
+                  <MenuItem data-period-type value="weeks">Weeks</MenuItem>
+                  <MenuItem data-period-type value="months">Months</MenuItem>
+                </Select>
+              </FormControl>
             </Grid>
           </Grid>
           <Button

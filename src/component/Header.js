@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import React from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -10,20 +9,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end',
     padding: theme.spacing(2),
   },
+  link: {
+    '&:hover': { color: '#3977fa' },
+  },
 }));
 
 export default function Header() {
   const classes = useStyles();
-  const [isHovered, setIsHovered] = useState(false);
   return (
     <header className={classes.header}>
-      <Link color="inherit" target="_blank" rel="noopener" href="https://github.com/wale-bant/covid19-estimator/blob/assessment/README.md">
-        <GitHubIcon
-          fontSize="large"
-          color={isHovered ? 'primary' : 'inherit'}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        />
+      <Link className={classes.link} color="inherit" target="_blank" rel="noopener" href="https://github.com/wale-bant/covid19-estimator/blob/assessment/README.md">
+        README
       </Link>
     </header>
   );

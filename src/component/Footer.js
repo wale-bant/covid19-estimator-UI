@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
   },
   link: {
-    color: '#74809a',
     '&:hover': { color: '#3977fa' },
   },
 }));

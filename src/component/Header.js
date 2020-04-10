@@ -17,7 +17,7 @@ export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <header className={classes.header}>
-      <Link color="inherit" target="_blank" href="https://github.com/wale-bant/covid19-estimator/blob/assessment/README.md">
+      <Link color="inherit" target="_blank" rel="noopener" href="https://github.com/wale-bant/covid19-estimator/blob/assessment/README.md">
         <GitHubIcon
           fontSize="large"
           color={isHovered ? 'primary' : 'inherit'}

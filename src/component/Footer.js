@@ -6,10 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    position: 'fixed',
-    bottom: '30px',
-    left: 0,
-    right: 0,
+    position: 'sticky',
+    marginTop: theme.spacing(2),
   },
   link: {
     '&:hover': { color: '#3977fa' },

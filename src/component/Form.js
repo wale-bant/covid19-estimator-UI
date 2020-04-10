@@ -142,6 +142,7 @@ export default function Form() {
                   label="Period Type"
                   onChange={handleChange}
                   value={state.periodType}
+                  inputProps={{ 'data-period-type': true }}
                 >
                   <MenuItem data-period-type value="days">Days</MenuItem>
                   <MenuItem data-period-type value="weeks">Weeks</MenuItem>

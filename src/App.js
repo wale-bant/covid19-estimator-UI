@@ -1,15 +1,12 @@
 import React from 'react';
-import Header from './component/Header';
-import Footer from './component/Footer';
-import Form from './component/Form';
-import './App.css';
+import Homepage from './views/Homepage';
+import Result from './views/Result';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Form />
-      <Footer />
+      <Homepage />
+      <Result />
     </div>
   );
 }

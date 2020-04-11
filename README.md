@@ -1,68 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# #BuildForSDG Cohort-1 JavaScript Assessment
 
-## Available Scripts
+> Build an overly simplified COVID-19 infection impact estimator
 
-In the project directory, you can run:
+This is an eligibility assessment for the 2020 [#BuildforSDG](https://buildforsdg.andela.com/) program
 
-### `npm start`
+The assessment empowers me to **attempt** helping society and leaders prepare for the **real big problem** of COVID-19, which is **its impact on lives, health systems, supply chains, and the economy**:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> 1. Too many patients, not enough hospitals and beds. A serious shortage of ventilators, masks and other PPE - if _we don’t practice social distancing_.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+> 2. Job losses or freezes, low cash flow and low production (even for essentials like food). These and more from too many people being sick, a sizable number dying (including some of the best people in many fields), and many others affected by the impact of losing loved ones or a world operating in slow motion
 
-### `npm test`
+[Try it Out!](<[https://estimate-covid19.netlify.com/](https://estimate-covid19.netlify.com/)>)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Resources for estimation
 
-### `npm run build`
+> COVID-19 infections doubles every 3 days. Expect 50x (at least 10x) recported cases to be actual number of infected people - [Jason S. Warner](https://medium.com/@Jason_Scott_Warner/the-sober-math-everyone-must-understand-about-the-pandemic-2b0145881993)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+> Several stats from Harvard Medical School / Massachusetts General Hospital - [move to 00:09:42 of this video](https://externalmediasite.partners.org/Mediasite/Play/53a4003de5ab4b4da5902f078744435a1d?fbclid=IwAR3-HS64-QB9AEbJdxV7ovcCB6nDXGgOkEawgTOYtQx-b720cIKVaJVPq-k)

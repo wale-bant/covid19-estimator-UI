@@ -1,13 +1,10 @@
 import React, { useContext } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../../assets/coronavirus.png';
@@ -126,22 +123,6 @@ export default function Form() {
                 <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
                 <MenuItem data-period-type="true" value="months">Months</MenuItem>
               </TextField>
-              {/* <FormControl variant="outlined" className={classes.formControl}>
-                <InputLabel id="period-type-label">Period Type</InputLabel>
-                <Select
-                  id="period-type"
-                  name="periodType"
-                  variant="outlined"
-                  label="Period Type"
-                  onChange={handleChange}
-                  value={state.periodType}
-                  inputProps={{ 'data-period-type': true }}
-                >
-                  <MenuItem data-period-type="true" value="days">Days</MenuItem>
-                  <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
-                  <MenuItem data-period-type="true" value="months">Months</MenuItem>
-                </Select>
-              </FormControl> */}
             </Grid>
           </Grid>
           <Button

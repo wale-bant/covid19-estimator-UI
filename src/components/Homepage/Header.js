@@ -18,7 +18,7 @@ export default function Header() {
   const classes = useStyles();
   return (
     <header className={classes.header}>
-      <Link className={classes.link} color="inherit" target="_blank" rel="noopener" href="https://github.com/wale-bant/covid19-estimator/blob/assessment/README.md">
+      <Link className={classes.link} color="inherit" target="_blank" rel="noopener" href="https://github.com/wale-bant/covid19-estimator-UI/blob/master/README.md">
         README
       </Link>
     </header>

@@ -22,7 +22,7 @@ export default function Footer() {
         <Typography variant="body2" color="textSecondary" align="center">
           Built after washing hands by
           {' '}
-          <Link className={classes.link} color="inherit" href="https://waledev.com/">
+          <Link className={classes.link} color="inherit" href="https://github.com/wale-bant/">
             Olawale Ashiru
           </Link>
         </Typography>

@@ -111,7 +111,22 @@ export default function Form() {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <FormControl variant="outlined" className={classes.formControl}>
+              <TextField
+                fullWidth
+                id="period-type"
+                name="periodType"
+                variant="outlined"
+                label="Period Type"
+                onChange={handleChange}
+                value={state.periodType}
+                inputProps={{ 'data-period-type': true }}
+                select
+              >
+                <MenuItem data-period-type="true" value="days">Days</MenuItem>
+                <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
+                <MenuItem data-period-type="true" value="months">Months</MenuItem>
+              </TextField>
+              {/* <FormControl variant="outlined" className={classes.formControl}>
                 <InputLabel id="period-type-label">Period Type</InputLabel>
                 <Select
                   id="period-type"
@@ -126,7 +141,7 @@ export default function Form() {
                   <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
                   <MenuItem data-period-type="true" value="months">Months</MenuItem>
                 </Select>
-              </FormControl>
+              </FormControl> */}
             </Grid>
           </Grid>
           <Button

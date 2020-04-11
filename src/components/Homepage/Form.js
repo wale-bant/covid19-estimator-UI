@@ -44,102 +44,105 @@ export default function Form() {
   && state.reportedCases && state.timeToElapse;
 
   return (
-    <>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className={classes.paper}>
-          <img className={classes.avatar} alt="covid-19" src={logo} />
-          <Typography component="h1" variant="h5" style={{ textAlign: 'center' }}>
-            An overly simplified COVID-19 infection impact estimator
-          </Typography>
-          <form className={classes.form} noValidate onSubmit={handleSubmit}>
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  autoFocus
-                  type="number"
-                  name="population"
-                  label="Population"
-                  variant="outlined"
-                  onChange={handleChange}
-                  value={state.population}
-                  inputProps={{ 'data-population': true }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  type="number"
-                  variant="outlined"
-                  name="reportedCases"
-                  label="Reported Cases"
-                  onChange={handleChange}
-                  value={state.reportedCases}
-                  inputProps={{ 'data-reported-cases': true }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  type="number"
-                  variant="outlined"
-                  name="totalHospitalBeds"
-                  label="Total Hospital Beds"
-                  onChange={handleChange}
-                  value={state.totalHospitalBeds}
-                  inputProps={{ 'data-total-hospital-beds': true }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  type="number"
-                  variant="outlined"
-                  name="timeToElapse"
-                  label="Time To Elapse"
-                  onChange={handleChange}
-                  value={state.timeToElapse}
-                  inputProps={{ 'data-time-to-elapse': true }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <FormControl variant="outlined" className={classes.formControl}>
-                  <InputLabel id="period-type-label">Period Type</InputLabel>
-                  <Select
-                    name="periodType"
-                    variant="outlined"
-                    label="Period Type"
-                    onChange={handleChange}
-                    value={state.periodType}
-                    inputProps={{ 'data-period-type': true }}
-                  >
-                    <MenuItem data-period-type="true" value="days">Days</MenuItem>
-                    <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
-                    <MenuItem data-period-type="true" value="months">Months</MenuItem>
-                  </Select>
-                </FormControl>
-              </Grid>
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <div className={classes.paper}>
+        <img className={classes.avatar} alt="covid-19" src={logo} />
+        <Typography component="h1" variant="h5" style={{ textAlign: 'center' }}>
+          An overly simplified COVID-19 infection impact estimator
+        </Typography>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                autoFocus
+                type="number"
+                id="population"
+                name="population"
+                label="Population"
+                variant="outlined"
+                onChange={handleChange}
+                value={state.population}
+                inputProps={{ 'data-population': true }}
+              />
             </Grid>
-            <Button
-              fullWidth
-              size="large"
-              type="submit"
-              color="primary"
-              variant="contained"
-              data-go-estimate
-              disabled={!isValid}
-              className={classes.submit}
-            >
-              Get Estimate
-            </Button>
-          </form>
-        </div>
-      </Container>
-    </>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                type="number"
+                id="reported-cases"
+                variant="outlined"
+                name="reportedCases"
+                label="Reported Cases"
+                onChange={handleChange}
+                value={state.reportedCases}
+                inputProps={{ 'data-reported-cases': true }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                type="number"
+                variant="outlined"
+                id="total-hospital-beds"
+                name="totalHospitalBeds"
+                label="Total Hospital Beds"
+                onChange={handleChange}
+                value={state.totalHospitalBeds}
+                inputProps={{ 'data-total-hospital-beds': true }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                type="number"
+                variant="outlined"
+                name="timeToElapse"
+                id="time-to-elapse"
+                label="Time To Elapse"
+                onChange={handleChange}
+                value={state.timeToElapse}
+                inputProps={{ 'data-time-to-elapse': true }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <FormControl variant="outlined" className={classes.formControl}>
+                <InputLabel id="period-type-label">Period Type</InputLabel>
+                <Select
+                  id="period-type"
+                  name="periodType"
+                  variant="outlined"
+                  label="Period Type"
+                  onChange={handleChange}
+                  value={state.periodType}
+                  inputProps={{ 'data-period-type': true }}
+                >
+                  <MenuItem data-period-type="true" value="days">Days</MenuItem>
+                  <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
+                  <MenuItem data-period-type="true" value="months">Months</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+          </Grid>
+          <Button
+            fullWidth
+            size="large"
+            type="submit"
+            color="primary"
+            variant="contained"
+            data-go-estimate
+            disabled={!isValid}
+            className={classes.submit}
+          >
+            Get Estimate
+          </Button>
+        </form>
+      </div>
+    </Container>
   );
 }

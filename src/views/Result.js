@@ -29,10 +29,9 @@ export default function Result() {
       <Backdrop className={classes.backdrop} open={dialogOpen} onClick={handleClose}>
         <Dialog
           fullWidth
-          maxWidth="sm"
           open={dialogOpen}
           onClose={handleClose}
-          aria-labelledby="max-width-dialog-title"
+          aria-labelledby="result-dialog"
         >
           <DialogTitle className={classes.title}>
             Estimations for the next

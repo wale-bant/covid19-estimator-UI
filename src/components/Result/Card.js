@@ -82,8 +82,8 @@ export default function Card({ data }) {
       <ListItem>
         <ListItemAvatar>
           <Avatar className={classes.avatar}>
-            <span role="img" aria-label="severe">
-              🤢
+            <span role="img" aria-label="severe" style={{ color: '#ff9800' }}>
+              ⚠️
             </span>
           </Avatar>
         </ListItemAvatar>
@@ -96,8 +96,8 @@ export default function Card({ data }) {
       <ListItem>
         <ListItemAvatar>
           <Avatar className={classes.avatar}>
-            <span role="img" aria-label="severe">
-              🤢
+            <span role="img" aria-label="severe" style={{ color: 'tomato' }}>
+              ❗
             </span>
           </Avatar>
         </ListItemAvatar>
@@ -112,7 +112,7 @@ export default function Card({ data }) {
       <ListItem>
         <ListItemAvatar>
           <Avatar className={classes.avatar}>
-            <span role="img" aria-label="severe">
+            <span role="img" aria-label="money">
               💲
             </span>
           </Avatar>

@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
@@ -108,21 +110,23 @@ export default function Form() {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField
-                fullWidth
-                id="period-type"
-                name="periodType"
-                variant="outlined"
-                label="Period Type"
-                onChange={handleChange}
-                value={state.periodType}
-                inputProps={{ 'data-period-type': true }}
-                select
-              >
-                <MenuItem data-period-type="true" value="days">Days</MenuItem>
-                <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
-                <MenuItem data-period-type="true" value="months">Months</MenuItem>
-              </TextField>
+              <FormControl variant="outlined" className={classes.formControl}>
+                <InputLabel htmlFor="period-type">Period Type</InputLabel>
+                <Select
+                  native
+                  fullWidth
+                  name="periodType"
+                  variant="outlined"
+                  label="Period Type"
+                  onChange={handleChange}
+                  value={state.periodType}
+                  inputProps={{ id: 'period-type', 'data-period-type': true }}
+                >
+                  <option data-period-type="true" value="days">Days</option>
+                  <option data-period-type="true" value="weeks">Weeks</option>
+                  <option data-period-type="true" value="months">Months</option>
+                </Select>
+              </FormControl>
             </Grid>
           </Grid>
           <Button
